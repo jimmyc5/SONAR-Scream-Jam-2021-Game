@@ -21,8 +21,9 @@ public class dotSpawner : MonoBehaviour
 
     void Start()
     {
+     //removed so that object would appear when inside visable circle 
      //0f sets opacity to 0 when sprite is first drawn  to be sure invisable
-      gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,0.0f);
+     //  gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,0.0f);
 
       spawnPoint = gameObject.GetComponent<Transform>();    
     }
