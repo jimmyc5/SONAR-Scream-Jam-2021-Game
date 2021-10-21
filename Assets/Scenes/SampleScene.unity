@@ -847,14 +847,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 648100879}
     m_Modifications:
-    - target: {fileID: 60428181663034637, guid: 01ab79376484f6147a4380403b8c8ed0, type: 3}
-      propertyPath: distance
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 60428181663034637, guid: 01ab79376484f6147a4380403b8c8ed0, type: 3}
-      propertyPath: swimSpeed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3078722344527622656, guid: 01ab79376484f6147a4380403b8c8ed0, type: 3}
       propertyPath: m_Name
       value: purple_spawner
