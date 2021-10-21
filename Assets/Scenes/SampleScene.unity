@@ -593,7 +593,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1423487614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,7 +685,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -847,14 +847,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 648100879}
     m_Modifications:
-    - target: {fileID: 60428181663034637, guid: 01ab79376484f6147a4380403b8c8ed0, type: 3}
-      propertyPath: distance
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 60428181663034637, guid: 01ab79376484f6147a4380403b8c8ed0, type: 3}
-      propertyPath: swimSpeed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3078722344527622656, guid: 01ab79376484f6147a4380403b8c8ed0, type: 3}
       propertyPath: m_Name
       value: purple_spawner
@@ -916,6 +908,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: yellow_spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 1964874278871002092, guid: 690a41076f6b83d4796688a592237838, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964874278871002092, guid: 690a41076f6b83d4796688a592237838, type: 3}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964874278871002092, guid: 690a41076f6b83d4796688a592237838, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964874278871002092, guid: 690a41076f6b83d4796688a592237838, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1964874278871002093, guid: 690a41076f6b83d4796688a592237838, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.68
@@ -958,6 +966,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1964874278871002093, guid: 690a41076f6b83d4796688a592237838, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964874278871002095, guid: 690a41076f6b83d4796688a592237838, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964874278871002095, guid: 690a41076f6b83d4796688a592237838, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964874278871002095, guid: 690a41076f6b83d4796688a592237838, type: 3}
+      propertyPath: m_UsedByEffector
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
