@@ -119,7 +119,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7886247853951970041, guid: c753790f6fa2aa842bdc9d500f97b334, type: 3}
       propertyPath: m_Name
-      value: purple_spawner Variant
+      value: purple_spawner
       objectReference: {fileID: 0}
     - target: {fileID: 7886247853951970042, guid: c753790f6fa2aa842bdc9d500f97b334, type: 3}
       propertyPath: displayTime
@@ -187,6 +187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1657039855, guid: c753790f6fa2aa842bdc9d500f97b334, type: 3}
+    - {fileID: 1813972322, guid: c753790f6fa2aa842bdc9d500f97b334, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c753790f6fa2aa842bdc9d500f97b334, type: 3}
 --- !u!1 &3078722344527622656 stripped
 GameObject:
