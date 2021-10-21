@@ -908,22 +908,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: yellow_spawner
       objectReference: {fileID: 0}
-    - target: {fileID: 1964874278871002092, guid: 690a41076f6b83d4796688a592237838, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964874278871002092, guid: 690a41076f6b83d4796688a592237838, type: 3}
-      propertyPath: m_UseAutoMass
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964874278871002092, guid: 690a41076f6b83d4796688a592237838, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964874278871002092, guid: 690a41076f6b83d4796688a592237838, type: 3}
-      propertyPath: m_Constraints
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 1964874278871002093, guid: 690a41076f6b83d4796688a592237838, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.68
@@ -966,18 +950,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1964874278871002093, guid: 690a41076f6b83d4796688a592237838, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964874278871002095, guid: 690a41076f6b83d4796688a592237838, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964874278871002095, guid: 690a41076f6b83d4796688a592237838, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964874278871002095, guid: 690a41076f6b83d4796688a592237838, type: 3}
-      propertyPath: m_UsedByEffector
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
