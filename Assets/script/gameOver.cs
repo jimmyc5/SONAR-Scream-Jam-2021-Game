@@ -10,10 +10,8 @@ public class gameOver : MonoBehaviour
         //check if collided with player
         if(target.name.Equals("boat"))
         {
-            //PLACE HOLDER
-            //pauses the game indefinitly
-            GameObject.Find("Score").GetComponent<scoreTracker>().endGame();
-            Time.timeScale =0;            
+            //ends game in scoreTracker
+            GameObject.Find("Score").GetComponent<scoreTracker>().endGame();          
         }
     }
 }
