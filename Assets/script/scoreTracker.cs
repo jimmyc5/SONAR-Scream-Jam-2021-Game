@@ -14,6 +14,12 @@ public class scoreTracker : MonoBehaviour
         highScore = PlayerPrefs.GetInt("HighScore", 0);
     }
 
+    void Update(){
+        if(score == 10){
+            victory();
+        }
+    }
+
     public void endGame()
     {
         if(score>highScore)
