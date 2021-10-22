@@ -14,10 +14,17 @@ public class blip : MonoBehaviour
     float hold;
     void Start()
     {
-     //0f sets opacity to 0 when sprite is first drawn
-      gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,opac); 
-
       hold = displayTime;  
+    }
+
+
+    
+    void OnTriggerEnter2D(Collider2D target)
+    {    
+        if(target.gameObject.name.Equals("aroundBoat"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Update()
