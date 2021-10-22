@@ -42,7 +42,7 @@ public class monsterSound : MonoBehaviour
         //3.0f is distance from boat to edge of sight
         if (3.0f >= Vector2.Distance(rb.position, bb.position) & !isChasing)
         {
-            audioSource.PlayOneShot(monster, 50); 
+            audioSource.PlayOneShot(monster, 1f); 
             isChasing = true;
         }
 

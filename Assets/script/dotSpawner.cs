@@ -58,11 +58,11 @@ public class dotSpawner : MonoBehaviour
             int clip = Random.Range(1, 3);
 
             if(clip == 1)
-                audioSource.PlayOneShot(ping1, 40);
+                audioSource.PlayOneShot(ping1, 1f);
             if(clip == 2)
-                audioSource.PlayOneShot(ping2, 40);
+                audioSource.PlayOneShot(ping2, 1f);
             if(clip == 3)
-                audioSource.PlayOneShot(ping3, 40);
+                audioSource.PlayOneShot(ping3, 1f);
 
             //if spawn the blip in place
             GameObject newObject = Instantiate(gb, spawnPoint.position, spawnPoint.rotation) as GameObject;
