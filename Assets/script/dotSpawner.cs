@@ -44,8 +44,15 @@ public class dotSpawner : MonoBehaviour
     //when hit by sonar beam draws image of self where it was scanned
     void OnTriggerEnter2D(Collider2D target)
     {    
+
+
+      Rigidbody2D holder = GameObject.Find("boat").GetComponent<Rigidbody2D>();
+        
+        if(3.0f >= Vector2.Distance(gameObject.GetComponent<Rigidbody2D>().position, holder.position))
+        {
+        }
         //check if collided with sonar line
-        if(target.name.Equals("radar"))
+       else if(target.name.Equals("radar"))
         {
             //choose random clip to play
             int clip = Random.Range(1, 3);

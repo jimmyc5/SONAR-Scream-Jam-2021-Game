@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 9052089829109747128}
   - component: {fileID: 9052089829109747131}
   - component: {fileID: 6858090700292541554}
+  - component: {fileID: 2981297729410371557}
   m_Layer: 0
   m_Name: red_blip
-  m_TagString: Untagged
+  m_TagString: blip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +98,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayTime: 1
   opac: 1
+--- !u!58 &2981297729410371557
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9052089829109747130}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
