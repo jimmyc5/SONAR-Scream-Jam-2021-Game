@@ -45,7 +45,7 @@ public class scoreTracker : MonoBehaviour
         Collider2D hit;
         Vector3 location;
         do{
-            location = player.transform.position + (new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f,1f), 0f).normalized) * Random.Range(5f, 40f);
+            location = player.transform.position + (new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f,1f), 0f).normalized) * Random.Range(5f, 35f);
             hit = Physics2D.OverlapCircle(location, 1f);
         } while(hit); //forces re-roll of location if would spawn zombie in collision
         

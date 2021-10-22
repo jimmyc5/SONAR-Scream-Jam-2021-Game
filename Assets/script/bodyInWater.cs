@@ -15,23 +15,52 @@ public class bodyInWater : MonoBehaviour
     //boats rigidbody
     Rigidbody2D bb;
 
+    bool isChasing;
+    Vector3 startPos;
+    Vector3 wanderPos;
+    float wanderRange;
+    float speed;
+    AudioSource audioSource;
+    public AudioClip body;
+
   void Start()
     {
         //get components from objects
         bb = GameObject.Find("boat").GetComponent<Rigidbody2D>();    
         rb = GetComponent<Rigidbody2D>();
+        startPos = gameObject.transform.position;
+        wanderPos = gameObject.transform.position;
+        audioSource = gameObject.GetComponent<AudioSource>();
+        isChasing = false;
+        wanderRange = 5f;
+        speed = 1f;
     }
-
-
         //if close to boat person will begin swiming toward it
-    private void FixedUpdate()
-    {
-        if (distance >= Vector2.Distance(rb.position, bb.position))
+    void FixedUpdate()
+    { 
+        //3.0f is distance from boat to edge of sight
+        if (3.0f >= Vector2.Distance(rb.position, bb.position) & !isChasing)
         {
-            //adapated from dashball/ballscript.cs
-            Vector2 dir = (rb.transform.position - bb.transform.position).normalized;
-            rb.AddForce(-dir*swimSpeed);
+            audioSource.PlayOneShot(body, 15); 
+            isChasing = true;
         }
+
+        if(isChasing){
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, bb.position, Time.fixedDeltaTime * speed);
+        }
+        else{
+            //generate wanderPos if not too close
+            if(Vector3.Distance(gameObject.transform.position, wanderPos) <= .5f){
+                do{
+                    wanderPos = gameObject.transform.position + (new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f,1f), 0f).normalized) * Random.Range(1f, 5f);
+                } while(Vector3.Distance(startPos, wanderPos) > wanderRange);
+            }
+            //navigate to wanderPos
+            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, wanderPos, Time.fixedDeltaTime);
+
+
+        }
+
     }
 
     //if contact boat remove and add to score
