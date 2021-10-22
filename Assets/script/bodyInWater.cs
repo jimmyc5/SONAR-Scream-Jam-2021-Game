@@ -35,10 +35,10 @@ public class bodyInWater : MonoBehaviour
     }
 
     //if contact boat remove and add to score
-     void OnTriggerEnter2D(Collider2D target)
+    private void OnCollisionEnter2D(Collision2D target)
     {    
         //check if collided with player
-        if(target.name.Equals("boat"))
+        if(target.gameObject.name.Equals("boat"))
         { 
             GameObject.Find("Score").GetComponent<scoreTracker>().score+=1;
             Destroy(gameObject);
