@@ -5,10 +5,10 @@ using UnityEngine;
 public class gameOver : MonoBehaviour
 {
   //when hit player ends the game
-    void OnTriggerEnter2D(Collider2D target)
+    void OnCollisionEnter2D(Collision2D target)
     {    
         //check if collided with player
-        if(target.name.Equals("boat"))
+        if(target.gameObject.name.Equals("boat"))
         {
             //ends game in scoreTracker
             GameObject.Find("Score").GetComponent<scoreTracker>().endGame();          

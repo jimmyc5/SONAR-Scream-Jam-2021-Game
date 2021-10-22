@@ -8,8 +8,12 @@ public class monsterSound : MonoBehaviour
     AudioSource audioSource;
     public AudioClip monster;
 
-    float lastSound = 0; //the actual timer maybe I should use different names lol
- 
+    bool isChasing;
+    Vector3 startPos;
+    Vector3 wanderPos;
+    float wanderRange;
+    float speed;
+    scoreTracker score;
 
     Rigidbody2D rb;
     //boats rigidbody
@@ -21,22 +25,42 @@ public class monsterSound : MonoBehaviour
         //get componets from objects
         bb = GameObject.Find("boat").GetComponent<Rigidbody2D>();    
         rb = GetComponent<Rigidbody2D>();
-         audioSource = gameObject.GetComponent<AudioSource>();
-         lastSound = 5.0f;
+        score = GameObject.Find("Score").GetComponent<scoreTracker>();
+        audioSource = gameObject.GetComponent<AudioSource>();
+        startPos = gameObject.transform.position;
+        wanderPos = gameObject.transform.position;
+        isChasing = false;
+        wanderRange = 5f;
+        speed = 1.5f;
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        speed = 1f + (score.score * 0.1f); 
         //3.0f is distance from boat to edge of sight
-         if (3.0f >= Vector2.Distance(rb.position, bb.position) & lastSound > 4.0f)
+        if (3.0f >= Vector2.Distance(rb.position, bb.position) & !isChasing)
         {
             audioSource.PlayOneShot(monster, 50); 
-            lastSound=0;
+            isChasing = true;
         }
-        else
-        {
-               lastSound += Time.deltaTime;
+
+        if(isChasing){
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, bb.position, Time.fixedDeltaTime * speed);
         }
+        else{
+            //generate wanderPos if not too close
+            if(Vector3.Distance(gameObject.transform.position, wanderPos) <= .5f){
+                do{
+                    wanderPos = gameObject.transform.position + (new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f,1f), 0f).normalized) * Random.Range(1f, 5f);
+                } while(Vector3.Distance(startPos, wanderPos) > wanderRange);
+            }
+            //navigate to wanderPos
+            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, wanderPos, Time.fixedDeltaTime);
+
+
+        }
+
     }
 }

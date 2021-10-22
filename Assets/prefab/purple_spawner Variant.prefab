@@ -110,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 3
   swimSpeed: 1
+  body: {fileID: 8300000, guid: 38fa69facd884da44b315e0cae13ec3e, type: 3}
 --- !u!1001 &5172460084556339449
 PrefabInstance:
   m_ObjectHideFlags: 0
