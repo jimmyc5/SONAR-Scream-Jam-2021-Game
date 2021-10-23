@@ -16,7 +16,7 @@ public class sonar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, rotationPerUpdate);
+        transform.Rotate(0, 0, rotationPerUpdate * Time.deltaTime);
         transform.position = boat.position;
     }
 

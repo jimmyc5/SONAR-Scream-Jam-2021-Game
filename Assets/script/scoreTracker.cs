@@ -35,6 +35,11 @@ public class scoreTracker : MonoBehaviour
         if(score >= 10){
             victory();
         }
+
+        if(Input.GetKey("escape")){
+            Application.Quit();
+        }
+
     }
 
     public void SpawnThing(GameObject type) {
