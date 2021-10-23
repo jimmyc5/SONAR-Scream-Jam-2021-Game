@@ -530,7 +530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fee9d21eeb08845a45fd346c6e1fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationPerUpdate: 0.5
+  rotationPerUpdate: 90
   boat: {fileID: 1423487616}
 --- !u!61 &972919308
 BoxCollider2D:
