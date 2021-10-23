@@ -41,7 +41,7 @@ public class bodyInWater : MonoBehaviour
         //3.0f is distance from boat to edge of sight
         if (3.0f >= Vector2.Distance(rb.position, bb.position) & !isChasing)
         {
-            audioSource.PlayOneShot(body, 15); 
+            audioSource.PlayOneShot(body, 0.5f); 
             isChasing = true;
         }
 
